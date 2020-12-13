@@ -1,0 +1,1 @@
+export { PokemonAPI } from './pokeapi';
