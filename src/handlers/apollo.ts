@@ -17,7 +17,6 @@ const createServer = (graphQLOptions: object): ApolloServer =>
     });
 
 export const handler = (request: Request, graphQLOptions: object): Promise<Response> => {
-    console.log('handler')
     const server = createServer(graphQLOptions);
     return graphqlCloudflare(() => server.createGraphQLServerOptions(request as ApolloRequest))(request as ApolloRequest);
 };
